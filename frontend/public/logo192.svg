@@ -1,0 +1,37 @@
+<!-- ProductHub Logo 192x192 -->
+<svg width="192" height="192" viewBox="0 0 192 192" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGradient192" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3B82F6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#6366F1;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="iconGradient192" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#E0E7FF;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background Circle -->
+  <circle cx="96" cy="96" r="88" fill="url(#bgGradient192)" stroke="#1E40AF" stroke-width="4"/>
+  
+  <!-- Product Box Icon -->
+  <g fill="url(#iconGradient192)">
+    <!-- Main Box -->
+    <rect x="48" y="72" width="96" height="48" rx="4" fill="none" stroke="url(#iconGradient192)" stroke-width="4"/>
+    
+    <!-- Box Lid -->
+    <path d="M48 72 L96 56 L144 72 L96 88 Z" fill="url(#iconGradient192)" opacity="0.9"/>
+    
+    <!-- Left Side -->
+    <path d="M48 72 L48 120 L96 136 L96 88 Z" fill="url(#iconGradient192)" opacity="0.7"/>
+    
+    <!-- Right Side -->
+    <path d="M96 88 L96 136 L144 120 L144 72 Z" fill="url(#iconGradient192)" opacity="0.5"/>
+    
+    <!-- Center Line -->
+    <line x1="96" y1="56" x2="96" y2="88" stroke="url(#iconGradient192)" stroke-width="4"/>
+  </g>
+  
+  <!-- ProductHub Text -->
+  <text x="96" y="110" font-family="Arial, sans-serif" font-size="32" font-weight="bold" text-anchor="middle" fill="#FFFFFF">P</text>
+</svg>

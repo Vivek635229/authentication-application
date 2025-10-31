@@ -518,7 +518,7 @@ class Dashboard extends Component {
     return (
       <div className="min-h-screen bg-gray-50">
         {/* Header */}
-        <header className="bg-white shadow-sm border-b">
+        <header className="bg-white shadow-sm border-b fixed w-full z-10">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex justify-between items-center py-4">
               <div className="flex items-center">
@@ -533,7 +533,7 @@ class Dashboard extends Component {
               <div className="flex items-center space-x-4">
                 <button
                   onClick={this.handleProductOpen}
-                  className="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors flex items-center">
+                  className="bg-blue-600 text-white focus:outline-none px-4 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors flex items-center">
                   <svg
                     className="w-4 h-4 mr-2"
                     fill="none"
@@ -642,12 +642,15 @@ class Dashboard extends Component {
             </div>
           </div>
         </header>
+        <br />
+        <br />
+        <br />
 
         {/* Main Content */}
-        <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 ">
           {/* Welcome Section */}
-          <div className="mb-8">
-            <h1 className="text-3xl font-bold text-gray-900 mb-2">
+          <div className="mb-8 text-center">
+            <h1 className="text-4xl font-bold text-gray-900 mb-2 ">
               Welcome back, {user?.name || user?.username}!
             </h1>
             <p className="text-gray-600">
@@ -656,76 +659,76 @@ class Dashboard extends Component {
           </div>
 
           {/* Advanced Search & Filters */}
-          <div className="mb-8 bg-white rounded-xl shadow-sm border p-6 animate-fadeIn">
-            <div className="flex  lg:flex-row gap-6">
+          <div className="mb-8 bg-white rounded-xl shadow-sm border p-6 animate-fadeIn ">
+            <div className="flex  items-center justify-between  flex-wrap gap-6">
               {/* Search Bar */}
-              <div className="flex-1">
-                <div className="relative">
-                  <input
-                    type="text"
-                    name="search"
-                    value={this.state.search}
-                    onChange={this.onChange}
-                    placeholder="Search by name or description..."
-                    className="w-[400px] hover:border-[#9ca3af] pl-10 pr-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 transition-all"
-                  />
-                  <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                    <svg
-                      className="h-5 w-5 text-gray-400"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24">
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                      />
-                    </svg>
-                  </div>
+              <div className="relative">
+                <input
+                  type="text"
+                  name="search"
+                  value={this.state.search}
+                  onChange={this.onChange}
+                  placeholder="Search by name or description..."
+                  className="w-[400px] hover:border-[#9ca3af] pl-10 pr-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 transition-all"
+                />
+                <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                  <svg
+                    className="h-5 w-5 text-gray-400"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24">
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                    />
+                  </svg>
                 </div>
               </div>
 
-              {/* Filter Toggle */}
-              <button
-                onClick={this.toggleFilters}
-                className="flex items-center px-4 py-3 bg-gray-100 hover:bg-gray-200 rounded-lg transition-colors text-sm font-medium">
-                <svg
-                  className="w-4 h-4 mr-2"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24">
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.707A1 1 0 013 7V4z"
-                  />
-                </svg>
-                Filters
-                <svg
-                  className={`w-4 h-4 ml-2 transform transition-transform ${
-                    this.state.showFilters ? "rotate-180" : ""
-                  }`}
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24">
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M19 9l-7 7-7-7"
-                  />
-                </svg>
-              </button>
+              <div className="">
+                {/* Filter Toggle */}
+                <button
+                  onClick={this.toggleFilters}
+                  className="flex  items-center focus:outline-none w-[400px] justify-center lg:px-4 py-4 bg-gray-100 hover:bg-gray-200 rounded-lg transition-colors text-sm font-medium">
+                  <svg
+                    className="w-4 h-4 mr-2"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24">
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.707A1 1 0 013 7V4z"
+                    />
+                  </svg>
+                  Filters
+                  <svg
+                    className={`w-4 h-4 ml-6  transform transition-transform ${
+                      this.state.showFilters ? "rotate-180" : ""
+                    }`}
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24">
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                </button>
+              </div>
             </div>
 
             {/* Advanced Filters */}
             {this.state.showFilters && (
-              <div className="mt-6 pt-6 border-t animate-slideInUp">
-                <div className="flex flex-col sm:flex-row gap-4 items-end">
+              <div className="mt-6 pt-6 border-t animate-slideInUp ">
+                <div className="flex flex-col sm:flex-row gap-4 sm:w-full">
                   {/* Category Filter */}
-                  <div className="flex-1 min-w-[180px]">
+                  <div className="flex-1 min-w-[180px] ">
                     <label className="block text-sm font-medium text-gray-700 mb-2">
                       Category
                     </label>
@@ -1015,7 +1018,7 @@ class Dashboard extends Component {
                         <div className="flex space-x-3">
                           <button
                             onClick={() => this.handleProductEditOpen(product)}
-                            className="flex-1 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-all transform hover:scale-105 flex items-center justify-center">
+                            className="flex-1 focus:outline-none bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-all transform hover:scale-105 flex items-center justify-center">
                             <svg
                               className="w-4 h-4 mr-2"
                               fill="none"
@@ -1032,7 +1035,7 @@ class Dashboard extends Component {
                           </button>
                           <button
                             onClick={() => this.deleteProduct(product._id)}
-                            className="flex-1 bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-all transform hover:scale-105 flex items-center justify-center">
+                            className="flex-1 bg-red-600 hover:bg-red-700 focus:outline-none text-white px-4 py-2 rounded-lg text-sm font-medium transition-all transform hover:scale-105 flex items-center justify-center">
                             <svg
                               className="w-4 h-4 mr-2"
                               fill="none"
@@ -1462,14 +1465,14 @@ class Dashboard extends Component {
                   <div className="flex space-x-3 ">
                     <button
                       onClick={this.handleProductClose}
-                      className="px-4 py-2 text-gray-600 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors">
+                      className="px-4 py-2 text-gray-600 focus:outline-none border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors">
                       Cancel
                     </button>
 
                     {this.state.currentStep === 1 ? (
                       <button
                         onClick={this.nextStep}
-                        className="flex items-center px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-all transform hover:scale-105">
+                        className="flex items-center focus:outline-none px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-all transform hover:scale-105">
                         Next
                         <svg
                           className="w-4 h-4 ml-2"
