@@ -1,0 +1,140 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #f5f5f5;
+}
+
+.container-fluid {
+  padding: 20px;
+}
+
+/* Header Styles */
+h2 {
+  margin: 10px 0;
+  font-size: 24px;
+  color: #212121;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.button_style {
+  margin-right: 10px;
+  background-color: #3f51b5;
+  color: white;
+}
+.logout {
+  /* background-color: blue !important; */
+}
+.logout:hover {
+  background-color: #303f9f !important;
+  color: #ddd;
+}
+
+/* Modal Styles */
+.dialog-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.upload-btn {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  label {
+    cursor: pointer;
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #eee;
+    margin-right: 5px;
+  }
+}
+
+/* Table Styles */
+/* Search Box Container */
+.search-box {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  margin: 20px 0px 20px;
+  max-width: 400px;
+  padding: 10px;
+  background-color: #f0f0f0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Search Input */
+.search-input {
+  flex-grow: 1;
+  border: none;
+  background-color: transparent;
+  outline: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  color: #333;
+  /* border-radius: 30px; */
+}
+
+.search-input input {
+  background-color: transparent !important;
+}
+
+/* Placeholder Styling */
+.search-input::placeholder {
+  color: #888;
+}
+
+/* Search Icon Button */
+.search-icon {
+  color: #3f51b5;
+  font-size: 28px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.search-icon:hover {
+  color: #2c3e91;
+}
+
+/* Icon Button */
+.search-box .MuiIconButton-root {
+  padding: 10px;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+.search-box .MuiIconButton-root:hover {
+  background-color: rgba(63, 81, 181, 0.1);
+}
+
+/* Box Shadow on Focus */
+.search-input:focus-within {
+  box-shadow: 0 0 10px rgba(63, 81, 181, 0.5);
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th,
+td {
+  padding: 8px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+.pagination {
+  justify-content: center;
+  margin-top: 20px;
+}
